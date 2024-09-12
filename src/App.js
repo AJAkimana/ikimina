@@ -1,11 +1,21 @@
 import React from "react";
-import { Box, Button } from "@mui/material";
+import { Button, ThemeProvider, createTheme } from "@mui/material";
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1976d2", // Deep Sky Blue
+    },
+    secondary: {
+      main: "#663399",
+    },
+  },
+});
 function App() {
   return (
-    <Box>
-      <Button variant="contained">Hello World</Button>
-    </Box>
+    <ThemeProvider theme={theme}>
+      <Button>Click me</Button>
+    </ThemeProvider>
   );
 }
 
