@@ -7,7 +7,7 @@ const theme = createTheme({
       main: "#1976d2", // Deep Sky Blue
     },
     secondary: {
-      main: "#663399",
+      main: "#663399", // Rich Plum/Lavender
     },
   },
 });
