@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, ThemeProvider, createTheme } from "@mui/material";
-
+import { Button, ThemeProvider } from "@mui/material";
+import { theme } from "./common/theme";
 
 function App() {
   return (
