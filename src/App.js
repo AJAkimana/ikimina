@@ -1,4 +1,1 @@
-<header>
-
-    the data
-</header>
+<header>the data</header>;
