@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+export const Home = () => {
   return (
     <Box>
       <h1>This is the home page</h1>
@@ -10,4 +10,3 @@ const Home = () => {
     </Box>
   );
 };
-export default Home;

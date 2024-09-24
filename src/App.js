@@ -1,15 +1,13 @@
 import React from "react";
 import { Button, ThemeProvider } from "@mui/material";
 import { theme } from "./common/theme";
-import RouteFiles from "./app.routes";
+import { AppRoutes } from "./app.routes";
 
-const App = () => {
+export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Button>Click me</Button>
-      <RouteFiles />
+      <AppRoutes />
     </ThemeProvider>
   );
 };
-
-export default App;

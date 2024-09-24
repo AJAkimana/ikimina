@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
-import Login from "./pages/login";
+import { Home } from "./pages/home";
+import { Login } from "./pages/login";
 import { Box } from "@mui/material";
 
-const AppRoutes = ()=> {
+export const AppRoutes = () => {
   return (
     <Box>
       <Routes>
@@ -13,5 +13,4 @@ const AppRoutes = ()=> {
       </Routes>
     </Box>
   );
-}
-export default AppRoutes;
+};

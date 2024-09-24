@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+export const Login = () => {
   return (
     <Box>
       <h1>This is the Login page</h1>
@@ -10,4 +10,3 @@ const Login = () => {
     </Box>
   );
 };
-export default Login;
