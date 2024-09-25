@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
-    <Box>
-      <h1>This is the home page</h1>
-      <Link to="login">Click to view our Login page</Link>
+    <Box sx={{ margin: "30px" }}>
+      <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+        <Link to="/">Home</Link>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
+        <Link to="dashboard">DashBoard</Link>
+        <Link to="dashboard">Login</Link>
+      </Box>
     </Box>
   );
 };
