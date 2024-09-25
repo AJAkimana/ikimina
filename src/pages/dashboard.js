@@ -6,7 +6,7 @@ export const DashBoard = () => {
   return (
     <Box>
       <h1>This is the DashBoard page</h1>
-      <Link to="/">Click to view our Home page</Link>
+      <Link to="login">Click to view our Login page</Link>
     </Box>
   );
 };

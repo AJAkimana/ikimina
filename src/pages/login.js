@@ -6,7 +6,7 @@ export const Login = () => {
   return (
     <Box>
       <h1>This is the Login page</h1>
-      <Link to="/">Click to view our Home page</Link>
+      <Link to="/dashboard">Click to view our DashBoard page</Link>
     </Box>
   );
 };
