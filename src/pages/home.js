@@ -20,6 +20,7 @@ export const Home = () => {
           display: "flex",
           justifyContent: "flex-start",
           alignItems: "center",
+          gap: "20px",
         }}
       >
         <BungalowIcon />
