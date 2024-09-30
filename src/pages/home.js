@@ -2,6 +2,7 @@ import React from "react";
 import { Box, InputAdornment, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
+import BungalowIcon from "@mui/icons-material/Bungalow";
 
 export const Home = () => {
   return (
@@ -18,8 +19,10 @@ export const Home = () => {
         sx={{
           display: "flex",
           justifyContent: "flex-start",
+          alignItems: "center",
         }}
       >
+        <BungalowIcon />
         <Link to="/" style={{ textDecoration: "none" }}>
           Home
         </Link>
@@ -29,7 +32,7 @@ export const Home = () => {
         sx={{
           display: "flex",
           justifyContent: "flex-end",
-          gap: "10px",
+          gap: "50px",
           alignItems: "center",
         }}
       >
