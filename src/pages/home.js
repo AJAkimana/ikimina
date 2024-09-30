@@ -11,6 +11,7 @@ export const Home = () => {
       </Box>
       <Box sx={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
         <TextField
+          sx={{ height: "10px" }}
           label="Search"
           variant="outlined"
           InputProps={{
