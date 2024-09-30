@@ -5,13 +5,36 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export const Home = () => {
   return (
-    <Box sx={{ margin: "30px" }}>
-      <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
-        <Link to="/">Home</Link>
+    <Box
+      sx={{
+        margin: "30px",
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-start",
+        }}
+      >
+        <Link to="/" style={{ textDecoration: "none" }}>
+          Home
+        </Link>
       </Box>
-      <Box sx={{ display: "flex", justifyContent: "flex-end", gap: "10px" }}>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+          gap: "10px",
+          alignItems: "center",
+        }}
+      >
         <TextField
-          sx={{ height: "10px" }}
+          size="small"
           label="Search"
           variant="outlined"
           InputProps={{
@@ -22,8 +45,12 @@ export const Home = () => {
             ),
           }}
         />
-        <Link to="dashboard">DashBoard</Link>
-        <Link to="dashboard">Login</Link>
+        <Link to="dashboard" style={{ textDecoration: "none" }}>
+          DashBoard
+        </Link>
+        <Link to="dashboard" style={{ textDecoration: "none" }}>
+          Login
+        </Link>
       </Box>
     </Box>
   );

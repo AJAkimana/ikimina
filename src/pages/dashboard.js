@@ -6,7 +6,9 @@ export const DashBoard = () => {
   return (
     <Box>
       <h1>This is the DashBoard page</h1>
-      <Link to="login">Click to view our Login page</Link>
+      <Link to="login" style={{ textDecoration: "none" }}>
+        Click to view our Login page
+      </Link>
     </Box>
   );
 };
