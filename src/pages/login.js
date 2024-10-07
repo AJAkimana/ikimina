@@ -1,12 +1,10 @@
-import { Box } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Box, Typography } from "@mui/material";
 
 export const Login = () => {
   return (
     <Box>
-      <h1>This is the Login page</h1>
-      <Link to="/">Click to view our Home page</Link>
+       <Typography color="#4D5E80" padding={4}>This is the Login page</Typography>
     </Box>
   );
 };
