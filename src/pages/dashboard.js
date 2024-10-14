@@ -2,6 +2,7 @@ import React from "react";
 import Table from "@mui/material/Table";
 import {
   Box,
+  Button,
   Paper,
   TableBody,
   TableCell,
@@ -11,9 +12,24 @@ import {
 } from "@mui/material";
 
 const Data = [
-  { name: "nevillen Karangwa ", Id: "1899999657843567" },
-  { name: "Kevillen Kirezi ", Id: "2002999657842587" },
-  { name: "Cyuzuzo Nellen", Id: "2004456789034545" },
+  {
+    Id: "1899999657843567",
+    name: "nevillen Karangwa ",
+    totalContribution: "5",
+    memberStatus: "Active",
+  },
+  {
+    Id: "2002999657842587",
+    name: "Kevillen Kirezi ",
+    totalContribution: "7",
+    memberStatus: "Inactive",
+  },
+  {
+    Id: "2004456789034545",
+    name: "Cyuzuzo Nellen",
+    totalContribution: "8",
+    memberStatus: "Inactive",
+  },
 ];
 
 function formatRwandaIdNumber(idNumber) {
@@ -21,7 +37,10 @@ function formatRwandaIdNumber(idNumber) {
   if (!/^\d{16}$/.test(idNumber)) {
     throw new Error("Invalid Rwanda ID number. It should be 16 digits long.");
   }
-  return idNumber;
+
+  // Format the ID number with spaces
+  const formattedIdNumber = `${idNumber.slice(0, 4)} ${idNumber.slice(4, 8)} ${idNumber.slice(8, 12)} ${idNumber.slice(12, 16)}`;
+  return formattedIdNumber;
 }
 
 export const DashBoard = () => {
@@ -45,21 +64,31 @@ export const DashBoard = () => {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {/* You can add a National ID column here if needed */}
                   {formatRwandaIdNumber(row.Id)}
                 </TableCell>
                 <TableCell align="right">{row.name}</TableCell>
+                <TableCell align="right">{row.totalContribution}</TableCell>
+                <TableCell align="right">{row.memberStatus}</TableCell>
                 <TableCell align="right">
-                  {" "}
-                  {/* Add Total contribution data here */}
-                </TableCell>
-                <TableCell align="right">
-                  {" "}
-                  {/* Add Member status data here */}
-                </TableCell>
-                <TableCell align="right">
-                  {" "}
-                  {/* Add Actions data here */}
+                  <Button variant="contained" color="primary" size="small">
+                    Edit
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="success"
+                    size="small"
+                    sx={{ ml: 1 }}
+                  >
+                    Add Contribution
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="warning"
+                    size="small"
+                    sx={{ ml: 1 }}
+                  >
+                    Change Status
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
