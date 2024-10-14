@@ -9,6 +9,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 
 const Data = [
@@ -45,11 +46,15 @@ function formatRwandaIdNumber(idNumber) {
 
 export const DashBoard = () => {
   return (
-    <Box>
+    <Box sx={{ margin: "22px" }}>
+      <Typography color="#4D5E80" sx={{marginBottom:"20px"}}>
+        This is the DashBoard page
+      </Typography>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead>
-            <TableRow>
+          <TableHead sx={{ border: 1.5 }}>
+            <TableRow sx={{ border: 3 }}>
               <TableCell>National ID Number</TableCell>
               <TableCell align="right">Names</TableCell>
               <TableCell align="right">Total contribution</TableCell>
@@ -59,10 +64,7 @@ export const DashBoard = () => {
           </TableHead>
           <TableBody>
             {Data.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
+              <TableRow key={row.name} sx={{ border: 1.5 }}>
                 <TableCell component="th" scope="row">
                   {formatRwandaIdNumber(row.Id)}
                 </TableCell>
