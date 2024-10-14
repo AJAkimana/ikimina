@@ -47,19 +47,28 @@ function formatRwandaIdNumber(idNumber) {
 export const DashBoard = () => {
   return (
     <Box sx={{ margin: "22px" }}>
-      <Typography color="#4D5E80" sx={{marginBottom:"20px"}}>
+      <Typography color="#4D5E80" sx={{ marginBottom: "20px" }}>
         This is the DashBoard page
       </Typography>
-
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead sx={{ border: 1.5 }}>
-            <TableRow sx={{ border: 3 }}>
-              <TableCell>National ID Number</TableCell>
-              <TableCell align="right">Names</TableCell>
-              <TableCell align="right">Total contribution</TableCell>
-              <TableCell align="right">Member status</TableCell>
-              <TableCell align="right">Actions</TableCell>
+          <TableHead>
+            <TableRow sx={{ border: 2.8 }}>
+              <TableCell sx={{ color: "#4D5E80", fontSize: "18px" }}>
+                National ID Number
+              </TableCell>
+              <TableCell sx={{ color: "#4D5E80", fontSize: "18px" }}>
+                Names
+              </TableCell>
+              <TableCell sx={{ color: "#4D5E80", fontSize: "18px" }}>
+                Total contribution
+              </TableCell>
+              <TableCell sx={{ color: "#4D5E80", fontSize: "18px" }}>
+                Member status
+              </TableCell>
+              <TableCell sx={{ color: "#4D5E80", fontSize: "18px" }}>
+                Actions
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -68,10 +77,10 @@ export const DashBoard = () => {
                 <TableCell component="th" scope="row">
                   {formatRwandaIdNumber(row.Id)}
                 </TableCell>
-                <TableCell align="right">{row.name}</TableCell>
-                <TableCell align="right">{row.totalContribution}</TableCell>
-                <TableCell align="right">{row.memberStatus}</TableCell>
-                <TableCell align="right">
+                <TableCell>{row.name}</TableCell>
+                <TableCell>{row.totalContribution}</TableCell>
+                <TableCell>{row.memberStatus}</TableCell>
+                <TableCell>
                   <Button variant="contained" color="primary" size="small">
                     Edit
                   </Button>
