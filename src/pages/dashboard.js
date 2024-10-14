@@ -10,17 +10,19 @@ import {
   TableRow,
 } from "@mui/material";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+const Data = [
+  { name: "nevillen Karangwa ", Id: "1899999657843567" },
+  { name: "Kevillen Kirezi ", Id: "2002999657842587" },
+  { name: "Cyuzuzo Nellen", Id: "2004456789034545" },
 ];
+
+function formatRwandaIdNumber(idNumber) {
+  // Check if the ID number is valid (16 digits)
+  if (!/^\d{16}$/.test(idNumber)) {
+    throw new Error("Invalid Rwanda ID number. It should be 16 digits long.");
+  }
+  return idNumber;
+}
 
 export const DashBoard = () => {
   return (
@@ -29,7 +31,7 @@ export const DashBoard = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>National ID</TableCell>
+              <TableCell>National ID Number</TableCell>
               <TableCell align="right">Names</TableCell>
               <TableCell align="right">Total contribution</TableCell>
               <TableCell align="right">Member status</TableCell>
@@ -37,18 +39,28 @@ export const DashBoard = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {Data.map((row) => (
               <TableRow
                 key={row.name}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.name}
+                  {/* You can add a National ID column here if needed */}
+                  {formatRwandaIdNumber(row.Id)}
                 </TableCell>
-                <TableCell align="right">{row.calories}</TableCell>
-                <TableCell align="right">{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell>
+                <TableCell align="right">{row.name}</TableCell>
+                <TableCell align="right">
+                  {" "}
+                  {/* Add Total contribution data here */}
+                </TableCell>
+                <TableCell align="right">
+                  {" "}
+                  {/* Add Member status data here */}
+                </TableCell>
+                <TableCell align="right">
+                  {" "}
+                  {/* Add Actions data here */}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
